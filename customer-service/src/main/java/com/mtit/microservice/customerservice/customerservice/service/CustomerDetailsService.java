@@ -24,4 +24,6 @@ public class CustomerDetailsService implements UserDetailsService {
         Customer customer = customerRepository.findByUserName(username);
         return new User(customer.getEmail(), customer.getPassword(), new ArrayList<>());
     }
+
+
 }
