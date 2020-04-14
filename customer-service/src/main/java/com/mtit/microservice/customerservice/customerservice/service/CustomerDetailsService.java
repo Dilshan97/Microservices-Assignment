@@ -22,7 +22,7 @@ public class CustomerDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         Customer customer = customerRepository.findByUserName(username);
-        return new User(customer.getEmail(), customer.getPassword(), new ArrayList<>());
+        return new User(customer.getUserName(), customer.getPassword(), new ArrayList<>());
     }
 
 
