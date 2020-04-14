@@ -32,15 +32,15 @@ public class JwtFilter extends OncePerRequestFilter {
         String token = null;
         String userName = null;
 
-        if (aurthorizationHeader != null && aurthorizationHeader.startsWith("Bearer")){
+        if (aurthorizationHeader != null && aurthorizationHeader.startsWith("Bearer")) {
             token = aurthorizationHeader.substring(7);
             userName = jwtUtil.extractUsername(token);
         }
 
-        if (userName != null && SecurityContextHolder.getContext().getAuthentication() == null){
+        if (userName != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             UserDetails userDetails = customerDetailsService.loadUserByUsername(userName);
 
-            if (jwtUtil.validateToken(token, userDetails)){
+            if (jwtUtil.validateToken(token, userDetails)) {
                 UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken =
                         new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
                 usernamePasswordAuthenticationToken

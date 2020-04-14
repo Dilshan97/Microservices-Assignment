@@ -24,20 +24,20 @@ public class AuthController {
     private CustomerRepository customerRepository;
 
     @GetMapping("/")
-    public String index(){
+    public String index() {
         return "Hello ! ABC Company Customer Micro service";
     }
 
     @PostMapping("/authenticate")
     public String generateToken(@RequestBody AuthRequest authRequest) throws Exception {
-        try{
+        try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
                             authRequest.getUserName(),
                             authRequest.getPassword()
                     )
             );
-        }catch (Exception ex){
+        } catch (Exception ex) {
             throw new Exception("Invalid Username / Password " + ex);
         }
 
@@ -46,7 +46,8 @@ public class AuthController {
 
 
     @PostMapping(value = "/register", consumes = "application/json", produces = "application/json")
-    public @ResponseBody AuthResponse createCustomer(@RequestBody CustomerRequest customerRequest){
+    public @ResponseBody
+    AuthResponse createCustomer(@RequestBody CustomerRequest customerRequest) {
 
         System.out.println("User Details : " + customerRequest);
 
