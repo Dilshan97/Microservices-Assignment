@@ -8,6 +8,6 @@ public class AuthController {
 
     @GetMapping("/")
     public String index(){
-        return "Hello Spring Boot !";
+        return "Hello ! ABC Company Customer Microservice";
     }
 }
