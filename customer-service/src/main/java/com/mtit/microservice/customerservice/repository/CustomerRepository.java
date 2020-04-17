@@ -1,6 +1,6 @@
-package com.mtit.microservice.customerservice.customerservice.repository;
+package com.mtit.microservice.customerservice.repository;
 
-import com.mtit.microservice.customerservice.customerservice.model.Customer;
+import com.mtit.microservice.customerservice.model.Customer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CustomerRepository extends JpaRepository<Customer, String> {

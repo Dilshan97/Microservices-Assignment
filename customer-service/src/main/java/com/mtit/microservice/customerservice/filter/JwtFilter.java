@@ -1,7 +1,7 @@
-package com.mtit.microservice.customerservice.customerservice.filter;
+package com.mtit.microservice.customerservice.filter;
 
-import com.mtit.microservice.customerservice.customerservice.service.CustomerDetailsService;
-import com.mtit.microservice.customerservice.customerservice.util.JwtUtil;
+import com.mtit.microservice.customerservice.service.CustomerDetailsService;
+import com.mtit.microservice.customerservice.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;

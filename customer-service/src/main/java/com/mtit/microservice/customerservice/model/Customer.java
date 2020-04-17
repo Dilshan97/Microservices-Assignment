@@ -1,4 +1,4 @@
-package com.mtit.microservice.customerservice.customerservice.model;
+package com.mtit.microservice.customerservice.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
