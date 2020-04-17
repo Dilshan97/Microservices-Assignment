@@ -1,11 +1,11 @@
-package com.mtit.microservice.customerservice.customerservice.controller;
+package com.mtit.microservice.customerservice.controller;
 
-import com.mtit.microservice.customerservice.customerservice.model.AuthRequest;
-import com.mtit.microservice.customerservice.customerservice.model.AuthResponse;
-import com.mtit.microservice.customerservice.customerservice.model.Customer;
-import com.mtit.microservice.customerservice.customerservice.model.CustomerRequest;
-import com.mtit.microservice.customerservice.customerservice.repository.CustomerRepository;
-import com.mtit.microservice.customerservice.customerservice.util.JwtUtil;
+import com.mtit.microservice.customerservice.model.AuthRequest;
+import com.mtit.microservice.customerservice.model.AuthResponse;
+import com.mtit.microservice.customerservice.model.Customer;
+import com.mtit.microservice.customerservice.model.CustomerRequest;
+import com.mtit.microservice.customerservice.repository.CustomerRepository;
+import com.mtit.microservice.customerservice.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

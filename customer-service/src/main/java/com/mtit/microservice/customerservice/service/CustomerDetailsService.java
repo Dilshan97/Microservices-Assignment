@@ -1,7 +1,7 @@
-package com.mtit.microservice.customerservice.customerservice.service;
+package com.mtit.microservice.customerservice.service;
 
-import com.mtit.microservice.customerservice.customerservice.model.Customer;
-import com.mtit.microservice.customerservice.customerservice.repository.CustomerRepository;
+import com.mtit.microservice.customerservice.model.Customer;
+import com.mtit.microservice.customerservice.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

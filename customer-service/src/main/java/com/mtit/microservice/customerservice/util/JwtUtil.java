@@ -1,4 +1,4 @@
-package com.mtit.microservice.customerservice.customerservice.util;
+package com.mtit.microservice.customerservice.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

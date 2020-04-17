@@ -1,4 +1,4 @@
-package com.mtit.microservice.customerservice.customerservice;
+package com.mtit.microservice.customerservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,7 +1,7 @@
-package com.mtit.microservice.customerservice.customerservice.config;
+package com.mtit.microservice.customerservice.config;
 
-import com.mtit.microservice.customerservice.customerservice.filter.JwtFilter;
-import com.mtit.microservice.customerservice.customerservice.service.CustomerDetailsService;
+import com.mtit.microservice.customerservice.filter.JwtFilter;
+import com.mtit.microservice.customerservice.service.CustomerDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
