@@ -21,7 +21,7 @@ public class DeliveryServiceImpl {
 
         deliveryDetails.setUserName(deliveryRequest.getUserName());
 
-        ResponseEntity<DeliveryResponse> deliveryRequestResponse = restTemplate.postForEntity("http://localhost:8081/get-user", deliveryDetails, DeliveryResponse.class);
+        ResponseEntity<DeliveryResponse> deliveryRequestResponse = restTemplate.postForEntity("http://localhost:8080/get-customer", deliveryDetails, DeliveryResponse.class);
 
         var deliveryResponse = new DeliveryResponse();
 
