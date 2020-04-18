@@ -14,7 +14,7 @@ This project is based on the SLIIT 4 Years Modern Topics in IT Module. This micr
  - Payment Service
  
 #### API Documentations
- - [Customer Service](https://documenter.getpostman.com/view/11066197/Szf25VvF?version=latest#a21b19cf-8514-4b16-be81-3a7568815a4b
+ - [Customer Service](https://documenter.getpostman.com/view/11066197/Szf25VvF?version=latest#a21b19cf-8514-4b16-be81-3a7568815a4b)
  - [Delivery Service](https://documenter.getpostman.com/view/11066197/Szf55A7t?version=latest)
 
  
