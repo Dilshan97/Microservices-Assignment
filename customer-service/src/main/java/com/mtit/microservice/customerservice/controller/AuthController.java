@@ -1,9 +1,6 @@
 package com.mtit.microservice.customerservice.controller;
 
-import com.mtit.microservice.customerservice.model.AuthRequest;
-import com.mtit.microservice.customerservice.model.AuthResponse;
-import com.mtit.microservice.customerservice.model.Customer;
-import com.mtit.microservice.customerservice.model.CustomerRequest;
+import com.mtit.microservice.customerservice.model.*;
 import com.mtit.microservice.customerservice.repository.CustomerRepository;
 import com.mtit.microservice.customerservice.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,5 +69,29 @@ public class AuthController {
         customerResponse.setMessage("Successfully created the customer");
 
         return customerResponse;
+    }
+
+    @PostMapping(value = "/get-customer", consumes = "application/json", produces = "application/json")
+    public @ResponseBody FindCustomerResponse getCustomer(@RequestBody FindCustomerRequest customerRequest){
+
+        System.out.println("Customer Request : " + customerRequest);
+
+        Customer customer = customerRepository.findByUserName(customerRequest.getUserName());
+
+        var findCustomer = new FindCustomerResponse();
+
+        findCustomer.setCustomerId(customer.getCustomerId());
+
+        findCustomer.setFirstName(customer.getFirstName());
+
+        findCustomer.setLastName(customer.getLastName());
+
+        findCustomer.setEmail(customer.getEmail());
+
+        findCustomer.setPhone(customer.getPhone());
+
+        findCustomer.setAddress(customer.getAddress());
+
+        return findCustomer;
     }
 }
