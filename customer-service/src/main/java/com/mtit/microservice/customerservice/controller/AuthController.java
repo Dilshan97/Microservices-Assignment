@@ -25,6 +25,7 @@ public class AuthController {
         return "Hello ! ABC Company Customer Micro service";
     }
 
+    //Generate Authentication Token
     @PostMapping("/authenticate")
     public String generateToken(@RequestBody AuthRequest authRequest) throws Exception {
         try {
@@ -41,7 +42,7 @@ public class AuthController {
         return jwtUtil.generateToken(authRequest.getUserName());
     }
 
-
+    // Register a new Customer
     @PostMapping(value = "/register", consumes = "application/json", produces = "application/json")
     public @ResponseBody
     AuthResponse createCustomer(@RequestBody CustomerRequest customerRequest) {
@@ -71,6 +72,7 @@ public class AuthController {
         return customerResponse;
     }
 
+    //Get Authorized Customer Details
     @PostMapping(value = "/get-customer", consumes = "application/json", produces = "application/json")
     public @ResponseBody FindCustomerResponse getCustomer(@RequestBody FindCustomerRequest customerRequest){
 

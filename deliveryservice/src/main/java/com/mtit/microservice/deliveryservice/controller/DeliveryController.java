@@ -12,12 +12,13 @@ public class DeliveryController {
     @Autowired
     private DeliveryServiceImpl deliveryService;
 
-
+    //Root end-point
     @GetMapping("/")
     public String index(){
         return "Hello Delivery Service !";
     }
 
+    //Get Customer Details API end-point
     @PostMapping(value = "/get-delivery-details", consumes = "application/json", produces = "application/json")
     public @ResponseBody DeliveryResponse getDeliveryDetails(@RequestBody DeliveryRequest deliveryRequest){
 
